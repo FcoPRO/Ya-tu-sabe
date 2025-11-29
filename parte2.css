@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 50px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 700px; /* CAMBIO CLAVE: Aumentado de 600px a 700px */
+    min-height: 650px; /* CAMBIO CLAVE: Aumentado de 550px a 650px */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #e91e63; 
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+/* --- Estilos del Corazón --- */
+#heartContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto; 
+}
+
+.letter {
+    position: absolute;
+    font-size: 18px; 
+    font-weight: bold;
+    color: #e91e63; 
+    line-height: 1;
+    white-space: pre;
+    transition: transform 0.1s ease-out, opacity 0.5s ease-in-out; 
+    opacity: 0; 
+}
+
+.letter:hover {
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+/* --- Animación de Latido --- */
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); } 
+    100% { transform: scale(1); }
+}
+
+.beating-heart {
+    animation: beat 1.5s infinite ease-in-out; 
+}
+
+/* --- Estilos del Mensaje Central --- */
+#centerMessage {
+    position: absolute;
+    width: 90%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    font-family: 'Georgia', serif; 
+    font-style: italic;
+    color: black; 
+    padding: 10px;
+    box-sizing: border-box;
+    /* Ajuste para la legibilidad: */
+    line-height: 1.4; 
+}
+
+.message-letter {
+    font-size: 16px;
+    opacity: 0; 
+    transition: opacity 0.1s ease-in; 
+    display: inline-block; 
+    white-space: pre; 
+}
