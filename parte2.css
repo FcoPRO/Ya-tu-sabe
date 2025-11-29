@@ -109,4 +109,14 @@ button:hover {
     transition: opacity 0.1s ease-in; 
     display: inline-block; 
     white-space: pre; 
+
+}
+/* Media query para móviles pequeños (ej. ancho de pantalla menor a 480px) */
+@media (max-width: 480px) {
+    .letter {
+        font-size: 14px; /* Reducir el tamaño de las letras del corazón */
+    }
+    .message-letter {
+        font-size: 13px; /* Reducir el tamaño de las letras del mensaje central */
+    }
 }
